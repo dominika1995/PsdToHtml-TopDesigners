@@ -366,7 +366,7 @@
         text-transform: uppercase;
         font-size: 80px;
         font-weight: 700;
-        margin-top: -3%; }
+        margin-top: -2%; }
         @media only screen and (max-width: 768px) {
           .top__section--border--title {
             margin-top: -3%;
@@ -377,3 +377,136 @@
         @media (max-width: 400px) {
           .top__section--border--title {
             font-size: 40px; } }
+
+.team {
+  margin-top: 5%;
+  margin-bottom: 5%; }
+  .team__photo {
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+    padding: -15px;
+    position: relative; }
+    @media only screen and (max-width: 768px) {
+      .team__photo {
+        padding: 0; } }
+    @media only screen and (max-width: 768px) {
+      .team__photo {
+        width: 100%; } }
+    .team__photo--adrianna {
+      background-image: url("../img/team-adrianna.png"); }
+    .team__photo--olivia {
+      background-image: url("../img/team-olivia.png"); }
+    .team__photo--thomas {
+      background-image: url("../img/team-thomas.png"); }
+    .team__photo--taylor {
+      background-image: url("../img/team-taylor.png"); }
+    .team__photo--border {
+      position: absolute;
+      border: 3px solid white;
+      border-right-color: transparent;
+      width: 95%;
+      height: 80%;
+      top: 0;
+      bottom: 0;
+      right: -3px;
+      margin: auto; }
+      .team__photo--border--push {
+        border-left-color: transparent;
+        border-right-color: white;
+        right: 0;
+        left: -26px;
+        top: 0;
+        bottom: 0; }
+        .team__photo--border--push--triangle {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -4px;
+          width: 0;
+          height: 0;
+          border-top: 40px solid transparent;
+          border-bottom: 40px solid transparent;
+          border-left: 50px solid white;
+          margin: auto 0; }
+          @media only screen and (max-width: 768px) {
+            .team__photo--border--push--triangle {
+              right: 0;
+              margin: 0 auto;
+              border-right: 40px solid transparent;
+              border-left: 40px solid transparent;
+              border-top: 50px solid white; } }
+      .team__photo--border--triangle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-right: 50px solid white;
+        margin: auto 0; }
+        @media only screen and (max-width: 768px) {
+          .team__photo--border--triangle {
+            left: 0;
+            margin: 0 auto;
+            border-right: 40px solid transparent;
+            border-left: 40px solid transparent;
+            border-top: 50px solid white; } }
+      @media only screen and (max-width: 768px) {
+        .team__photo--border {
+          top: -33px;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          border: 3px solid white;
+          width: auto;
+          height: 90%;
+          padding-right: 0;
+          margin-right: 20px;
+          margin-left: 20px; } }
+  .team__text {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    color: black;
+    padding-left: 0;
+    padding-right: 0; }
+    .team__text--name {
+      font-size: 25px;
+      margin: 0;
+      padding-top: 10%; }
+    .team__text--profession {
+      font-size: 15px;
+      margin-bottom: 0; }
+    .team__text svg {
+      width: 150px;
+      height: 20px; }
+      .team__text svg line {
+        stroke: #f34739;
+        stroke-width: 3; }
+    .team__text--description {
+      font-size: 18px;
+      max-width: 60%;
+      margin-left: 20%; }
+    .team__text--border {
+      border: 3px solid black;
+      border-left-color: transparent;
+      height: 240px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-right: 20px; }
+      .team__text--border--pull {
+        border-left-color: black;
+        border-right-color: transparent;
+        margin-left: 20px;
+        margin-right: 0; }
+      @media only screen and (max-width: 768px) {
+        .team__text--border {
+          border-left-color: black;
+          border-right-color: black;
+          margin-right: 20px;
+          margin-left: 20px;
+          border-bottom-color: transparent;
+          margin-bottom: 0; } }

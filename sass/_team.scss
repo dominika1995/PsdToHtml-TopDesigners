@@ -1,0 +1,152 @@
+.team{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  &__photo{
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+    padding: -15px;
+    position: relative;
+    @media#{$xs-screen}{
+      padding:0;
+    }
+    @media#{$xs-screen}{
+      width: 100%;
+    }
+    &--adrianna {
+      background-image: url('../img/team-adrianna.png');
+    }
+    &--olivia{
+      background-image: url('../img/team-olivia.png');
+    }
+    &--thomas{
+      background-image: url('../img/team-thomas.png');
+    }
+    &--taylor{
+      background-image: url('../img/team-taylor.png');
+    }
+    &--border{
+      position: absolute;
+      border: 3px solid white;
+      border-right-color:transparent;
+      width: 95%;
+      height: 80%;
+      top: 0;
+      bottom: 0;
+      right: -3px;
+      margin: auto;
+      &--push{
+        border-left-color:transparent;
+        border-right-color:white;
+        right: 0;
+        left:-26px;
+        top: 0;
+        bottom: 0;
+        &--triangle {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -4px;
+          width: 0;
+          height: 0;
+          border-top: 40px solid transparent;
+          border-bottom: 40px solid transparent;
+          border-left: 50px solid white;
+          margin: auto 0;
+          @media#{$xs-screen}{
+            right:0;
+            margin: 0 auto;
+            border-right: 40px solid transparent;
+            border-left: 40px solid transparent;
+            border-top: 50px solid white;
+          }
+        }
+      }
+      &--triangle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-right: 50px solid white;
+        margin: auto 0;
+        @media#{$xs-screen}{
+          left:0;
+          margin: 0 auto;
+          border-right: 40px solid transparent;
+          border-left: 40px solid transparent;
+          border-top: 50px solid white;
+        }
+      }
+      @media#{$xs-screen}{
+        top: -33px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border: 3px solid white;
+        width: auto;
+        height: 90%;
+        padding-right: 0;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+    }
+  }
+  &__text{
+    text-align: center;
+    font-family: $font-quicksand;
+    color:black;
+    padding-left: 0;
+    padding-right:0;
+    &--name{
+      font-size: 25px;
+      margin: 0;
+      padding-top: 10%;
+    }
+    &--profession{
+      font-size: 15px;
+      margin-bottom:0;
+    }
+    svg{
+      width: 150px;
+      height: 20px;
+      line{
+        stroke: #f34739;
+        stroke-width: 3;
+      }
+    }
+    &--description{
+      font-size: 18px;
+      max-width: 60%;
+      margin-left: 20%;
+    }
+
+    &--border{
+      border: 3px solid black;
+      border-left-color: transparent;
+      height: 240px;
+      margin-top:30px;
+      margin-bottom:30px;
+      margin-right:20px;
+      &--pull{
+        border-left-color: black;
+        border-right-color: transparent;
+        margin-left: 20px;
+        margin-right: 0;
+      }
+
+      @media#{$xs-screen}{
+        border-left-color: black;
+        border-right-color: black;
+        margin-right: 20px;
+        margin-left: 20px;
+        border-bottom-color: transparent;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
