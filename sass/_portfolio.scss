@@ -1,4 +1,5 @@
 .portfolio{
+
   .seven__cols{
       margin-right: 0px !important;
       margin-left: 0px !important;
@@ -10,10 +11,7 @@
           width: 14.285714285714285714285714285714%;
           *width: 14.285714285714285714285714285714%;
           padding-right: 0px;
-          padding-left: 0px;
-        }
-      }
-
+          padding-left: 0px;}}
       @media (min-width: 992px) {
         .col-md-1,
         .col-sm-1,
@@ -21,10 +19,7 @@
           width: 14.285714285714285714285714285714%;
           *width: 14.285714285714285714285714285714%;
           padding-right: 0px;
-          padding-left: 0px;
-        }
-      }
-
+          padding-left: 0px;} }
       @media (min-width: 1200px) {
         .col-md-1,
         .col-sm-1,
@@ -32,17 +27,15 @@
           width: 14.285714285714285714285714285714%;
           *width: 14.285714285714285714285714285714%;
           padding-right: 0px;
-          padding-left: 0px;
-        }
-      }
+          padding-left: 0px;}}
+
       .col-xs-4 {
         padding: 0;
         img {
           width: 100%;
-
-
         }
       }
+
     .portfolio__photo {
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
@@ -53,12 +46,13 @@
       position: relative;
       margin: 0 0 0 0;
       padding: 0 0 0 0;
+
       img{
         position: relative;
         margin: 0 0 0 0;
         padding: 0 0 0 0;
-
       }
+
       &--overlay {
         opacity: 0;
         position: absolute;
@@ -67,16 +61,18 @@
         left:0;
         right:0;
         bottom: 0;
+
         img {
           position: relative;
           z-index: 50;
           width:auto;
           padding-top:30%;
         }
-        text-align: center;
+
         svg{
           height: 30px;
           width: 90%;
+
           line{
             stroke-width: 3;
             stroke: black;
@@ -85,29 +81,25 @@
             }
           }
         }
-        &--line-left{
-          text-align: left;
-        }
-        &--line-right{}
+
         &--text{
           color: black;
           font-size: 14px;
           @media#{$md-screen}{
-            font-size: 12px;
-          }
+            font-size: 12px;}
           @media#{$sm-screen}{
-            font-size: 9px;
-          }
+            font-size: 9px;}
         }
       }
+
       &--overlay:hover,
       &--overlay:focus+.portfolio__photo:hover{
         opacity: 1;
-
         transition: all 1s;
         -webkit-transition: all 1s;
       }
     }
+    
     .portfolio__photo:hover{
       -webkit-filter: grayscale(0%);
       -moz-filter: grayscale(0%);

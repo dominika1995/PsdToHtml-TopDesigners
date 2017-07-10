@@ -563,8 +563,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      text-align: center; }
+      bottom: 0; }
       .portfolio .seven__cols .portfolio__photo--overlay img {
         position: relative;
         z-index: 50;
@@ -579,8 +578,6 @@
           @media only screen and (max-width: 992px) {
             .portfolio .seven__cols .portfolio__photo--overlay svg line {
               stroke-width: 2; } }
-      .portfolio .seven__cols .portfolio__photo--overlay--line-left {
-        text-align: left; }
       .portfolio .seven__cols .portfolio__photo--overlay--text {
         color: black;
         font-size: 14px; }
@@ -630,7 +627,7 @@
   .brands__line {
     padding: 0; }
   .brands__line--vertical {
-    height: 3px;
+    height: 1px;
     width: 100%;
     stroke: red; }
 
