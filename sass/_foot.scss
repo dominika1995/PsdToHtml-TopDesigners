@@ -1,0 +1,53 @@
+.foot {
+  padding: 0;
+  text-align: center;
+
+  &__up {
+
+    background-color: #101010;
+
+    &--all {
+      margin: 0 auto;
+
+      &--title {
+        padding-top: 8%;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 300;
+        color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+
+      &--text {
+        margin-left: 25%;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        color: #464646;
+        font-size: 15px;
+        width: 50%;
+        padding-bottom: 5%;
+      }
+
+      &--line {
+        height: 7px;
+        width: 40%;
+        stroke: #009989;
+        padding-bottom: 3%;
+        @media#{$xs-screen}{
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  &__down {
+    background-color: #0e0e0d;
+    padding: 1%;
+    
+    &--text {
+      color: #3a3a3a;
+      font-weight: 300;
+      font-family: $font-quicksand;
+    }
+  }
+}
