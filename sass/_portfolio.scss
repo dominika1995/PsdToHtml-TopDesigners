@@ -104,6 +104,8 @@
       &--overlay:focus+.portfolio__photo:hover{
         opacity: 1;
 
+        transition: all 1s;
+        -webkit-transition: all 1s;
       }
     }
     .portfolio__photo:hover{
@@ -112,6 +114,9 @@
       -o-filter: grayscale(0%);
       -ms-filter: grayscale(0%);
       filter: grayscale(0%);
+
+      transition: all 1s;
+      -webkit-transition: all 1s;
     }
   }
 }

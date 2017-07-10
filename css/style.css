@@ -591,13 +591,17 @@
           .portfolio .seven__cols .portfolio__photo--overlay--text {
             font-size: 9px; } }
     .portfolio .seven__cols .portfolio__photo--overlay:hover, .portfolio .seven__cols .portfolio__photo--overlay:focus + .portfolio__photo:hover {
-      opacity: 1; }
+      opacity: 1;
+      transition: all 1s;
+      -webkit-transition: all 1s; }
   .portfolio .seven__cols .portfolio__photo:hover {
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -o-filter: grayscale(0%);
     -ms-filter: grayscale(0%);
-    filter: grayscale(0%); }
+    filter: grayscale(0%);
+    transition: all 1s;
+    -webkit-transition: all 1s; }
 
 .brands {
   text-align: center; }
