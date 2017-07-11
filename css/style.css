@@ -209,91 +209,53 @@
     border-radius: 100%;
     height: 200px;
     width: 200px;
-    border: 5px solid #e6e3e3;
+    border: 3px solid #e6e3e3;
     text-align: center;
-    margin-left: 20%; }
-    @media only screen and (max-width: 768px) {
-      .numbers .numbers__circle {
-        margin-left: 30%; } }
-    @media (max-width: 350px) {
-      .numbers .numbers__circle {
-        margin-left: 20%; } }
+    margin: 0 auto; }
     .numbers .numbers__circle--count {
       font-weight: 700;
       font-size: 60px;
-      padding-top: 20%;
-      margin-bottom: 0px; }
+      margin-top: -80%; }
+    .numbers .numbers__circle .red {
+      border: 5px solid #f34739;
+      color: #f34739;
+      border-bottom-color: transparent;
+      border-right-color: transparent; }
+    .numbers .numbers__circle .green {
+      border: 5px solid #009980;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent; }
+    .numbers .numbers__circle .blue {
+      border: 5px solid #152b3c;
+      border-right-color: transparent; }
+    .numbers .numbers__circle--animation {
+      animation: rotate 2.5s 2 linear; }
+    .numbers .numbers__circle--colors {
+      z-index: 555;
+      border-radius: 100%;
+      height: 200px;
+      width: 200px;
+      text-align: center;
+      margin-top: -5px;
+      margin-left: -5px; }
   .numbers__text {
     color: #454545;
     text-align: center;
     width: 50%;
     margin-top: 5%;
     margin-left: 25%; }
-    @media only screen and (max-width: 1200px) {
-      .numbers__text {
-        margin-left: 30%; } }
-    @media only screen and (max-width: 992px) {
-      .numbers__text {
-        margin-left: 40%; } }
-    @media only screen and (max-width: 768px) {
-      .numbers__text {
-        width: 60%;
-        margin-left: 15%; } }
-    @media (max-width: 600px) {
-      .numbers__text {
-        margin-left: 20%; } }
-    @media (max-width: 500px) {
-      .numbers__text {
-        margin-left: 25%; } }
-    @media (max-width: 400px) {
-      .numbers__text {
-        margin-left: 30%; } }
-    @media (max-width: 350px) {
-      .numbers__text {
-        margin-left: 25%; } }
+  .numbers--red {
+    color: #f34739; }
+  .numbers--green {
+    color: #009989; }
+  .numbers--blue {
+    color: #152b3c; }
 
-.number--first {
-  color: #f34739; }
-.number--second {
-  color: #009989; }
-.number--three {
-  color: #152b3c; }
-
-.loader {
-  font-size: 1.5em;
-  color: gray;
-  position: relative;
-  padding: 3px;
-  /* make a square */
-  height: 250px;
-  width: 250px;
-  /* center content*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: coloranim infinite 5s; }
-
-.loader:after {
-  border-radius: inherit;
-  color: inherit;
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 3px;
-  background: linear-gradient(white, white), linear-gradient(0deg, transparent 40%, currentcolor 60%), linear-gradient(50deg, transparent 50%, currentcolor 52%);
-  background-clip: content-box, border-box, border-box;
-  z-index: -1;
-  mix-blend-mode: multiply;
-  /* if avalaible, else bg remains white */ }
-
-.spin:after {
-  animation: spin 2s linear infinite; }
-
-@keyframes spin {
-  to {
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
     transform: rotate(360deg); } }
 .top {
   padding: 0px; }

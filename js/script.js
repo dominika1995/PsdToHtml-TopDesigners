@@ -19,6 +19,7 @@ $(document).ready(function() {
                         r = el.getBoundingClientRect(),
                         t=r.top,
                         b=r.bottom;
+
                     return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));
                 } visPx();
                 $(win).on("resize scroll", visPx);
@@ -28,11 +29,11 @@ $(document).ready(function() {
 
     jQuery(function($) {
         $(".numbers__circle--count").inViewport(function(px) {
-            var num1=$(this).text();
-            //alert(num1);
+
+
             if(px>0 && !this.visibilityFlag) {
                 this.visibilityFlag = true;
-
+                $( ".numbers__circle--colors" ).addClass("numbers__circle--animation");
                 $(this).prop('Counter',0).animate({
                     Counter: $(this).text()
                 }, {
