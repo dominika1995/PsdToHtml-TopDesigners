@@ -4,18 +4,20 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: auto;
-
   @media#{$sm-screen}{
     height: 600px;
   }
-
   @media#{$xs-screen}{
     height: 500px;
   }
 
   &__header {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
     background-color: white;
-    max-height: 82px;
+    z-index: 3;
 
     &--logo {
       padding: 15px 20px;
@@ -29,10 +31,6 @@
       margin-left: 10%;
       line-height: 3.5;
       letter-spacing: 5px;
-
-      @media#{$xs-screen}{
-        //line-height: 4;
-      }
     }
 
     &--link {
@@ -64,116 +62,146 @@
         background-position: -100px 11px;
       }
     }
-
-    &--menu {
-      background-color: black;
-      cursor: pointer;
-      padding: 15px;
-      margin-right: -15px;
-      margin-left: -15px;
-      max-height: 100%;
-      overflow: hidden;
-      //position: relative;
-      left: 0;
-
-      @media#{$xs-screen}{
-        float: right;
-        background-color: white;
+    &--menu{
+      background-color: #0e0e0d;
+      height: 87px;
+      @media#{$xs-screen}
+      {
+        background: white;
       }
 
-      &--line {
-        background: #FFF;
+      &--text{
+        font-size: 30px;
+        color:white;
+        position: relative;
+        font-weight: 300;
+        top:15px;
+        z-index: 4;
+      }
 
-        @media#{$xs-screen} {
-          box-shadow: 0 1px 6px white;
-          background: black;
+      &--button {
+        transition: 0.1s transform linear;
+        position: relative;
+        background:0;
+        float: left;
+        margin: 2rem;
+        height: 2.7rem;
+        width: 3.5rem;
+        z-index: 10;
+        outline: 0;
+        padding: 0;
+        border: 0;
+        @media#{$xs-screen}{
+          float: right;
         }
-      }
 
-      &--list {
-        padding: 20px;
-        display:none;
+        &--middle {
 
-        li {
-          list-style-type: none;
-          position:relative;
-          @media#{$xs-screen}{
-            color: white;
-            text-align: right;
+          &, &::before, &::after {
+            transition: 0.1s background linear;
+            position: absolute;
+            background: white;
+            margin: auto;
+            width: 100%;
+            height: 0.3rem;
+            content: '';
+            top: 50%;
+            right: 0;
+            @media#{$xs-screen}{
+              background: black;  }
           }
 
+          & {
+            margin-top: -0.2rem
+          }
+
+          &::before {
+            top: -1.2rem;
+          }
+
+          &::after {
+            top: 1.2rem;
+          }
+
+          &::before,
+          &::after {
+            transform: rotate(0deg);
+          }
+
+          .active & {
+            background: 0;
+
+            &::before {
+              transform: rotate(45deg);
+            }
+
+            &::after {
+              transform: rotate(-45deg);
+            }
+
+            &::before,
+            &::after {
+              top: 0;
+            }
+
+            &,
+            &::before,
+            &::after {
+              transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s;
+            }
+          }
         }
       }
 
-      &--text {
-        color: white;
-        font-family: $font-dosis;
-        float: left;
-        font-size: 25px;
-        padding-top: 2%;
-        transition: opacity 500ms ease, margin-bottom 500ms ease, padding-left 250ms ease;
+      nav {
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.5);
+        position: fixed;
+        top:0;
+        margin-left: -15px;
+        transform: translateX(500px);
+        transition: transform 0.6s cubic-bezier(.56,.1,.34,.91);
+        padding-top: 6.2rem;
 
-        @media#{$md-screen} {
-          padding-top: 4%;
+        .menu-open & {
+          transform: translateX(0);
         }
 
-        @media#{$xs-screen} {
-          padding-top: 5%;
+        ul {
+          margin: 3% 0 0 0;
+          list-style: none;
+          padding: 0;
+
+          li {
+            text-align: left;
+            margin-left: 5%;
+            padding-bottom: 3%;
+
+            a {
+              font-size: 2em;
+              font-family: $font-quicksand;
+              color: black;
+              font-weight: 700;
+              &:hover,&:focus{
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
         }
-      }
-
-      &.active &--line:nth-child(2),
-      &.active &--line:nth-child(3) {
-        opacity: 0;
-        display: block;
-      }
-
-      &.active &--line:nth-child(1) {
-        height: 1000px;
-        width: 1000px;
-        margin: -20px;
-        margin-left: -40px;
-      }
-
-      & &--line {
-        height: 4px;
-        //display: block;
-        width: 40px;
-        box-shadow: 0 1px 6px #000;
-        margin: 10px;
-        opacity: 1;
-        transition: all 600ms ease;
-
-        @media#{$xs-screen} {
-          box-shadow: 0 1px 6px white;
-        }
-      }
-
-      &:not(.active) &--list li {
-        position:relative;
-        opacity: 0;
-        margin-bottom: -10px;
-      }
-
-      & &--list li {
-        opacity: 1;
-        font-size: 16px;
-        margin-bottom: 20px;
-        transition: opacity 500ms ease, margin-bottom 500ms ease, padding-left 250ms ease;
-      }
-
-      & &--list li:hover {
-        padding-left: 5px;
       }
     }
   }
+
 
   &__content{
     text-align: center;
     color: white;
     position: relative;
+    top:30px;
     &--top{
-      margin-top: 7%;
       display: inline-block;
       @media #{$sm-screen} {
         margin-top: 3%;
@@ -193,6 +221,7 @@
           stroke-width: 3;
         }
       }
+
       &--text{
         margin-top: -10%;
         font-family: $font-dosis;
@@ -203,6 +232,7 @@
         }
       }
     }
+
     &--title{
       font-family: $font-quicksand;
       text-transform: uppercase;
@@ -212,6 +242,7 @@
         font-size: 30px;
       }
     }
+
     &--check{
       color: white;
       background-color: transparent;
@@ -229,6 +260,7 @@
         padding: 10px 20px;
       }
     }
+
     &--bottom{
       color: white;
       background-color: transparent;
@@ -252,6 +284,7 @@
     }
   }
 }
+/*
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -260,7 +293,13 @@
   margin: 0;
   outline: 0 none;
   padding: 0;
-}
+}*/
+
+
+
+
+
+
 
 
 
