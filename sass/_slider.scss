@@ -230,6 +230,7 @@
         padding: 15px;
         display: table;
         white-space: nowrap;
+        margin:0 auto;
         @media #{$xs-screen} {
           font-size: 15px;
         }

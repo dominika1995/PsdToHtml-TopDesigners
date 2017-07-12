@@ -165,7 +165,8 @@
         font-size: 25px;
         padding: 15px;
         display: table;
-        white-space: nowrap; }
+        white-space: nowrap;
+        margin: 0 auto; }
         @media only screen and (max-width: 768px) {
           .slider__content--top--text {
             font-size: 15px; } }
@@ -293,7 +294,8 @@
   100% {
     transform: rotate(360deg); } }
 .top {
-  padding: 0px; }
+  padding: 0px;
+  text-align: center; }
   .top__section {
     height: 300px;
     background-size: 100% 100%;
@@ -326,21 +328,6 @@
         .top__section--border {
           width: 95%;
           height: 80%; } }
-      .top__section--border svg {
-        width: 150px;
-        height: 60px; }
-        @media only screen and (max-width: 992px) {
-          .top__section--border svg {
-            width: 100px; } }
-        @media only screen and (max-width: 768px) {
-          .top__section--border svg {
-            width: 70px; } }
-        @media (max-width: 500px) {
-          .top__section--border svg {
-            width: 50px; } }
-        .top__section--border svg line {
-          stroke: white;
-          stroke-width: 3; }
       .top__section--border--text {
         margin-top: -15%;
         font-family: "Dosis", sans-serif;
@@ -356,8 +343,7 @@
         @media (max-width: 400px) {
           .top__section--border--text {
             font-size: 15px;
-            padding: 10px;
-            padding-top: 5px; } }
+            padding: 5px 10px 10px 10px; } }
       .top__section--border--title {
         font-family: "Quicksand", sans-serif;
         text-transform: uppercase;
