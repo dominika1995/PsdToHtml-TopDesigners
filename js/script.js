@@ -4,19 +4,29 @@ $(document).ready(function () {
 
     /* NAVBAR */
 
-
+    var check=false;
     var isActive = false;
     $('.js-menu').on('click', function () {
         if (isActive) {
             $(this).removeClass('active');
             $('body').removeClass('menu-open');
+            check=false;
         } else {
             $(this).addClass('active');
             $('body').addClass('menu-open');
+            check=true;
         }
         isActive = !isActive;
     });
 
+    $('.slider__content,.numbers,.top,.team,.portfolio,.foot').on('click', function () {
+        if(check===true)
+        {
+            $('.js-menu').removeClass('active');
+            $('body').removeClass('menu-open');
+            isActive=!isActive;
+        }
+    });
 
     /* NUMBER */
 
@@ -53,6 +63,29 @@ $(document).ready(function () {
             }
         });
     });
+
+
+
+    /*Przewijanie strony*/
+
+    $('a[href^="#"]').on('click', function(event) {
+
+        var target = $( $(this).attr('href') );
+
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: (target.offset().top-80)
+            }, 1000);
+
+            $('.js-menu').removeClass('active');
+            $('body').removeClass('menu-open');
+            isActive=!isActive;
+
+        }
+    });
+
+
 });
 
 

@@ -168,12 +168,16 @@
         .menu-open & {
           transform: translateX(0);
         }
-
+        @media#{$xs-screen}{
+          background: rgba(255,255,255,0.9);
+        }
         ul {
-          margin: 3% 0 0 0;
+          margin: 4% 0 0 0;
           list-style: none;
           padding: 0;
-
+          @media#{$xs-screen}{
+            margin: 7% 0 0 0;
+          }
           li {
             text-align: left;
             margin-left: 5%;
@@ -184,6 +188,9 @@
               font-family: $font-quicksand;
               color: black;
               font-weight: 700;
+              @media#{$xs-screen}{
+                font-size: 1.5em;
+              }
               &:hover,&:focus{
                 text-decoration: none;
                 color: black;
