@@ -11,12 +11,19 @@
     width: 200px;
     border: 3px solid #e6e3e3;
     text-align: center;
-    margin:0 auto;
+    margin: 0 auto;
+    position: relative;
 
-    &--count {
-      font-weight: 700;
-      font-size: 60px;
-      margin-top: -80%;
+    &--inside {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &--count {
+        font-weight: 700;
+        font-size: 60px;
+      }
     }
 
     .red {
