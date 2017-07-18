@@ -1,9 +1,10 @@
 .slider {
   background-image: url('../img/slider-background.png');
-  height: 800px;
+  height: 900px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: auto;
+  padding-right: 0px;
   @media#{$sm-screen}{
     height: 600px;
   }
@@ -18,23 +19,26 @@
     right: 0;
     background-color: white;
     z-index: 3;
+    height: 80px;
 
     &--logo {
-      padding: 15px 20px;
+      padding: 7px 11px;
       border: 2px solid #f34739;
-      border-bottom-right-radius: 20%;
-      border-bottom-left-radius: 20%;
-      border-top-left-radius: 20%;
-      font-family: $font-dosis;
+      border-bottom-right-radius: 25%;
+      border-bottom-left-radius: 25%;
+      border-top-left-radius: 25%;
+      font-family: Dosis,sans-serif;
       font-weight: 300;
       font-size: 25px;
-      margin-left: 10%;
-      line-height: 3.5;
+      margin-left: 18%;
+      line-height: 3.0;
       letter-spacing: 5px;
     }
 
     &--link {
       float: right;
+      margin-right: 2%;
+      margin-top: 0.5%;
 
       .facebook, .instagram, .twitter, .linkedin {
         background-image: url('../img/slider-sprites.png');
@@ -65,7 +69,7 @@
 
     &--menu {
       background-color: #0e0e0d;
-      height: 87px;
+      height: 80px;
       @media#{$xs-screen}
       {
         background: white;
@@ -210,7 +214,7 @@
     text-align: center;
     color: white;
     position: relative;
-    top: 200px;
+    top: 230px;
     @media #{$sm-screen} {
       top: 150px;
     }
@@ -226,7 +230,7 @@
 
       &--text {
         font-family: $font-dosis;
-        font-size: 25px;
+        font-size: 30px;
         padding: 15px;
         display: table;
         white-space: nowrap;
@@ -236,19 +240,19 @@
         }
 
         &:before, &:after {
-          border-top: 2px solid white;
+          border-top: 1px solid white;
           content: '';
           display: table-cell;
           position: relative;
           top: 0.7em;
-          width: 35%;
+          width: 33%;
         }
 
         &:before {
-          right: 1.5%;
+          right: 4%;
         }
         &:after {
-          left: 1.5%;
+          left: 4%;
         }
       }
 
@@ -257,7 +261,8 @@
     &--title {
       font-family: $font-quicksand;
       text-transform: uppercase;
-      font-size: 40px;
+      font-size: 75px;
+      margin-top: -3%;
       font-weight: 700;
       @media #{$xs-screen} {
         font-size: 25px;
@@ -267,10 +272,10 @@
     &--check {
       color: white;
       background-color: transparent;
-      border-radius: 40%;
+      border-radius: 25%;
       border: 2px solid white;
       display: block;
-      padding: 15px 25px;
+      padding: 10px 35px;
       font-size: 20px;
       text-transform: uppercase;
       font-family: $font-quicksand;
